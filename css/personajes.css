@@ -1,0 +1,62 @@
+/* Grilla de personajes con Flexbox */
+.personajes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.personajes-grid h2 {
+    width: 100%;
+}
+
+/* Cards de personajes */
+.personajes-grid article {
+    flex: 0 0 32%;
+    margin-bottom: 1.5rem;
+    background-color: #f8f4ec;
+    border: 1px solid #5a1111;
+    scroll-margin-top: 8rem;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Link del título de la card */
+.link-card {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Hover visual, sin cambiar tamaño */
+.personajes-grid article:hover {
+    background-color: #eadbc8;
+    box-shadow: 0 0 12px rgba(90, 17, 17, 0.25);
+}
+
+/* Card seleccionada */
+.personajes-grid article:target {
+    flex: 0 0 100%;
+    background-color: #3b0a0a;
+    color: #f5f0e6;
+    box-shadow: 0 0 22px rgba(43, 0, 0, 0.45);
+}
+
+/* Textos dentro de la card seleccionada */
+.personajes-grid article:target h3,
+.personajes-grid article:target p,
+.personajes-grid article:target figcaption {
+    color: #f5f0e6;
+}
+
+.personajes-grid article:target h3 {
+    border-bottom-color: #f5f0e6;
+}
+
+
+/* Article introductorio */
+.personajes-grid .intro-personajes {
+    flex: 0 0 100%;
+}

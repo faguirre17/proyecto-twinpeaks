@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporadas</title>
+
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/temporadas.css">
 </head>
 
 <body>
     <header>
-        <a link-index href="../index.html"><img class="imagen-index" src="../img/index.png" alt="indice"></a>
+        <a class="link-index" href="../index.html">
+            <img class="imagen-index" src="../img/index.png" alt="indice">
+        </a>
+
         <nav class="menu-nav">
             <ul class="lista-nav">
                 <li class="lista-nav-item"><a class="lista-nav-link" href="./about.html">Sobre la serie</a></li>
@@ -22,25 +27,27 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="temporadas-page">
+
+        <section class="temporadas-hero">
             <h2 class="main-title">Temporadas y película</h2>
 
-            <figure>
+            <figure class="temporadas-hero-figure">
                 <img class="img-portada-pagina" src="../img/Twin-peaks-poster-temporadas.jpg"
                     alt="Portada general de Twin Peaks">
                 <figcaption>Las distintas etapas del universo de Twin Peaks</figcaption>
             </figure>
 
-            <audio controls>
+            <audio class="audio-temporadas" controls>
                 <source src="../resources/audio/TheBookhouseBoys.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
             </audio>
         </section>
-        <section>
-            <h3>Introducción</h3>
 
-            <article>
+        <section class="temporadas-intro">
+            <h3 class="temporadas-subtitle">Introducción</h3>
+
+            <article class="temporadas-card intro-card">
                 <p>
                     Twin Peaks se compone de distintas etapas que expanden su historia de manera progresiva.
                     La serie original se divide en dos temporadas emitidas entre 1990 y 1991, en las que se
@@ -57,15 +64,16 @@
             </article>
         </section>
 
-        <section>
-            <h3>Temporada 1</h3>
+        <section class="temporada-bloque temporada-uno" id="temporada-1">
+            <h3 class="temporada-title">Temporada 1</h3>
 
-            <article>
-                <figure>
+            <article class="temporadas-card temporada-info">
+                <figure class="temporada-figure">
                     <img class="img-portada-temporada" src="../img/twin-peaks-temporada1.jpg"
                         alt="Portada de la temporada 1 de Twin Peaks">
                     <figcaption>Portada de la primera temporada de Twin Peaks</figcaption>
                 </figure>
+
                 <p>
                     La primera temporada introduce el universo de Twin Peaks a partir del hallazgo del cuerpo
                     de Laura Palmer. Desde ese momento, el agente especial Dale Cooper llega al pueblo para
@@ -80,10 +88,10 @@
                 </p>
             </article>
 
-            <!--  Las listas de episodios me gustaría mostrarlas con una tabla, con duración, etc, para que quede mas prolijo -->
-            <article>
-                <h4>Episodios</h4>
-                <ol>
+            <article class="temporadas-card episodios-card">
+                <h4 class="episodios-title">Episodios</h4>
+
+                <ol class="lista-episodios">
                     <li>Pilot</li>
                     <li>Traces to Nowhere</li>
                     <li>Zen, or the Skill to Catch a Killer</li>
@@ -96,15 +104,16 @@
             </article>
         </section>
 
-        <section>
-            <h3>Temporada 2</h3>
+        <section class="temporada-bloque temporada-dos" id="temporada-2">
+            <h3 class="temporada-title">Temporada 2</h3>
 
-            <article>
-                <figure>
+            <article class="temporadas-card temporada-info">
+                <figure class="temporada-figure">
                     <img class="img-portada-temporada" src="../img/twin-peaks-temporada2.webp"
                         alt="Portada de la temporada 2 de Twin Peaks">
                     <figcaption>Portada de la segunda temporada de Twin Peaks</figcaption>
                 </figure>
+
                 <p>
                     La segunda temporada continúa la investigación iniciada en la primera y profundiza todavía
                     más en los secretos del pueblo. A medida que la historia avanza, nuevos personajes y conflictos
@@ -120,9 +129,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>Episodios</h4>
-                <ol>
+            <article class="temporadas-card episodios-card">
+                <h4 class="episodios-title">Episodios</h4>
+
+                <ol class="lista-episodios">
                     <li>May the Giant Be with You</li>
                     <li>Coma</li>
                     <li>The Man Behind Glass</li>
@@ -149,15 +159,16 @@
             </article>
         </section>
 
-        <section>
-            <h3>Fire Walk with Me</h3>
+        <section class="temporada-bloque pelicula-bloque fire-walk" id="fire-walk-with-me">
+            <h3 class="temporada-title">Fire Walk with Me</h3>
 
-            <article>
-                <figure>
+            <article class="temporadas-card temporada-info pelicula-info">
+                <figure class="temporada-figure">
                     <img class="img-portada-temporada" src="../img/fire-walk-with-me.webp"
                         alt="Póster de Twin Peaks Fire Walk with Me">
                     <figcaption>Póster de la película Twin Peaks: Fire Walk with Me</figcaption>
                 </figure>
+
                 <p>
                     <em>Fire Walk with Me</em> es la película estrenada en 1992 y funciona como una precuela de la
                     serie.
@@ -175,15 +186,16 @@
             </article>
         </section>
 
-        <section>
-            <h3>The Return</h3>
+        <section class="temporada-bloque temporada-return" id="the-return">
+            <h3 class="temporada-title">The Return</h3>
 
-            <article>
-                <figure>
+            <article class="temporadas-card temporada-info">
+                <figure class="temporada-figure">
                     <img class="img-portada-temporada" src="../img/the-return.jpeg"
                         alt="Portada de Twin Peaks The Return">
                     <figcaption>Portada de Twin Peaks: The Return</figcaption>
                 </figure>
+
                 <p>
                     <em>The Return</em> es la tercera temporada de Twin Peaks y fue estrenada en 2017, más de veinte
                     años
@@ -202,9 +214,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>Episodios</h4>
-                <ol>
+            <article class="temporadas-card episodios-card">
+                <h4 class="episodios-title">Episodios</h4>
+
+                <ol class="lista-episodios">
                     <li>Part 1 - My Log Has a Message for You</li>
                     <li>Part 2 - The Stars Turn and a Time Presents Itself</li>
                     <li>Part 3 - Call for Help</li>
@@ -226,6 +239,7 @@
                 </ol>
             </article>
         </section>
+
     </main>
 
     <footer>
@@ -233,14 +247,21 @@
         <p class="footer-text">Un pequeño pueblo. Grandes misterios. Nada es lo que parece.</p>
 
         <div class="footer-links">
-            <a href="https://mubi.com/en/ar/series/twin-peaks" target="_blank"><img class="img-footer logo-mubi"
-                    src="../img/mubi.png" alt="Mubi"></a>
-            <a href="https://www.instagram.com/twinpeaks/?hl=es-la" target="_blank"><img class="img-footer"
-                    src="../img/ig.png" alt="Instagram"></a>
-            <a href="https://www.imdb.com/title/tt0098936/" target="_blank"><img class="img-footer"
-                    src="../img/imdb.png" alt="IMDb"></a>
-            <a href="https://twinpeaks.fandom.com/wiki/Twin_Peaks_Wiki" target="_blank"><img class="img-footer"
-                    src="../img/tpwiki.webp" alt="Twin Peaks Wiki"></a>
+            <a class="footer-link" href="https://mubi.com/en/ar/series/twin-peaks" target="_blank">
+                <img class="img-footer logo-mubi" src="../img/mubi.png" alt="Mubi">
+            </a>
+
+            <a class="footer-link" href="https://www.instagram.com/twinpeaks/?hl=es-la" target="_blank">
+                <img class="img-footer" src="../img/ig.png" alt="Instagram">
+            </a>
+
+            <a class="footer-link" href="https://www.imdb.com/title/tt0098936/" target="_blank">
+                <img class="img-footer" src="../img/imdb.png" alt="IMDb">
+            </a>
+
+            <a class="footer-link" href="https://twinpeaks.fandom.com/wiki/Twin_Peaks_Wiki" target="_blank">
+                <img class="img-footer" src="../img/tpwiki.webp" alt="Twin Peaks Wiki">
+            </a>
         </div>
     </footer>
 </body>

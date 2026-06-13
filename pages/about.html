@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre La Serie</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/personajes.css">
 </head>
 
 <body>
     <header>
-          <a link-index href="../index.html"><img class="imagen-index" src="../img/index.png" alt="indice"></a>
+        <a class="link-index" href="../index.html"><img class="imagen-index" src="../img/index.png" alt="indice"></a>
         <nav class="menu-nav">
             <ul class="lista-nav">
                 <li class="lista-nav-item"><a class="lista-nav-link" href="./about.html">Sobre la serie</a></li>
@@ -55,10 +56,12 @@
             </article>
         </section>
 
-        <section>
-            <h3>Creadores y producción</h3>
-            <article>
-                <h4>David Lynch</h4>
+        <section class="personajes-grid">
+            <h2>Creadores y producción</h2>
+            <article id="david-lynch">
+                <h3>
+                    <a href="#david-lynch" class="link-card">David Lynch</a>
+                </h3>
                 <figure>
                     <img class="img-personaje" src="../img/david-lynch-twin-peaks.webp" alt="David Lynch">
                     <figcaption>David Lynch, cocreador de la serie y principal responsable de su estilo visual.
@@ -79,8 +82,10 @@
 
             </article>
 
-            <article>
-                <h4>Mark Frost</h4>
+            <article id="mark-frost">
+                <h3>
+                    <a href="#mark-frost" class="link-card">Mark Frost</a>
+                </h3>
                 <figure>
                     <img class="img-personaje" src="../img/Mark-Frost.jpg" alt="Mark Frost">
                     <figcaption>Mark Frost, cocreador y una pieza clave en el desarrollo de la historia.</figcaption>
@@ -101,8 +106,10 @@
 
             </article>
 
-            <article>
-                <h4>Angelo Badalamenti</h4>
+            <article id="angelo-badalamenti">
+                <h3>
+                    <a href="#angelo-badalamenti" class="link-card">Angelo Badalamenti</a>
+                </h3>
                 <figure>
                     <img class="img-personaje" src="../img/Angelo-Badalamenti-twin-peaks-composer-dies.webp"
                         alt="Angelo Badalamenti">
@@ -126,11 +133,13 @@
         </section>
 
         <!-- Misma logica que con personajes, hacer una card por cada locación y mostrarlo en columnas -->
-        <section>
-            <h3>Locaciones y ambientación</h3>
+        <section class="personajes-grid">
+            <h2>Locaciones y ambientación</h2>
 
-            <article>
-                <h4>El pueblo de Twin Peaks</h4>
+            <article id="pueblo-twin-peaks">
+                <h3>
+                    <a href="#pueblo-twin-peaks" class="link-card">El pueblo de Twin Peaks</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/poster-pueblo-twin-peaks.webp" alt="Pueblo Twin Peaks">
                     <figcaption>Vista general del pueblo ficticio de Twin Peaks</figcaption>
@@ -148,8 +157,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>Los bosques</h4>
+            <article id="bosques">
+                <h3>
+                    <a href="#bosques" class="link-card">Los bosques</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/ellie-davies-the-gloaming-1-785x428.jpg" alt="Bosques">
                     <figcaption>Los bosques que rodean Twin Peaks y refuerzan su atmósfera de misterio</figcaption>
@@ -167,8 +178,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>The Great Northern Hotel</h4>
+            <article id="great-northern-hotel">
+                <h3>
+                    <a href="#great-northern-hotel" class="link-card">The Great Northern Hotel</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/Great_Northern_Hotel.jpg" alt="Great Northern Hotel">
                     <figcaption>The Great Northern Hotel, uno de los lugares más emblemáticos del pueblo</figcaption>
@@ -186,8 +199,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>Double R Diner</h4>
+            <article id="double-r-diner">
+                <h3>
+                    <a href="#double-r-diner" class="link-card">Double R Diner</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/rr.jpg" alt="Double R Diner">
                     <figcaption>El Double R Diner, punto de encuentro cotidiano en Twin Peaks</figcaption>
@@ -204,8 +219,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>La estación del sheriff</h4>
+            <article id="estacion-sheriff">
+                <h3>
+                    <a href="#estacion-sheriff" class="link-card">La estación del sheriff</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/estacion-sheriff.webp" alt="Estación del sheriff">
                     <figcaption>La estación del sheriff, centro de la investigación en Twin Peaks</figcaption>
@@ -222,8 +239,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>La casa de Laura Palmer</h4>
+            <article id="casa-laura-palmer">
+                <h3>
+                    <a href="#casa-laura-palmer" class="link-card">La casa de Laura Palmer</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/Laura+Palmer's+house+-+Twin+Peaks.webp"
                         alt="Casa de Laura Palmer">
@@ -242,8 +261,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>El instituto</h4>
+            <article id="instituto">
+                <h3>
+                    <a href="#instituto" class="link-card">El instituto</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/twin_peaks_high_school.jpg" alt="High School">
                     <figcaption>El instituto de Twin Peaks, ligado a la vida juvenil del pueblo</figcaption>
@@ -260,8 +281,32 @@
                 </p>
             </article>
 
-            <article>
-                <h4>The Black Lodge</h4>
+            <article id="aserradero-packard">
+                <h3>
+                    <a href="#aserradero-packard" class="link-card">Aserradero Packard</a>
+                </h3>
+                <figure>
+                    <img class="img-locacion" src="../img/packard-sawmill.webp" alt="Aserradero Packard">
+                    <figcaption>El Aserradero Packard, uno de los espacios industriales más importantes de Twin Peaks
+                    </figcaption>
+                </figure>
+                <p>
+                    El Aserradero Packard es una de las locaciones importantes de Twin Peaks y representa el costado
+                    laboral e industrial del pueblo. Vinculado a la madera, los bosques y los negocios familiares,
+                    este espacio muestra otra cara de la comunidad, más relacionada con los intereses económicos y
+                    los conflictos de poder.
+                </p>
+                <p>
+                    Su presencia en la serie refuerza la idea de que Twin Peaks es un lugar lleno de secretos detrás
+                    de su apariencia tranquila. El aserradero no funciona solo como escenario, sino también como un
+                    espacio ligado a tensiones familiares, misterios y situaciones peligrosas.
+                </p>
+            </article>
+
+            <article id="black-lodge">
+                <h3>
+                    <a href="#black-lodge" class="link-card">The Black Lodge</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/blacklodgeempty.jpg" alt="Black Lodge">
                     <figcaption>The Black Lodge, uno de los espacios sobrenaturales más enigmáticos de la serie
@@ -279,8 +324,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>Roadhouse</h4>
+            <article id="roadhouse">
+                <h3>
+                    <a href="#roadhouse" class="link-card">Roadhouse</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/roadhouse.jpg" alt="Roadhouse">
                     <figcaption>El Roadhouse, espacio clave de la vida nocturna en Twin Peaks</figcaption>
@@ -302,8 +349,10 @@
                     e inquietante que caracteriza a Twin Peaks.
                 </p>
             </article>
-            <article>
-                <h4>The One Eyed Jack's</h4>
+            <article id="one-eyed-jacks">
+                <h3>
+                    <a href="#one-eyed-jacks" class="link-card">The One Eyed Jack's</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/63-One-Eyed-Jacks.webp" alt="The One Eyed Jack's">
                     <figcaption>The One Eyed Jack's, uno de los lugares más turbios del universo Twin Peaks</figcaption>
@@ -327,8 +376,10 @@
                 </p>
             </article>
 
-            <article>
-                <h4>The Convenience Store</h4>
+            <article id="convenience-store">
+                <h3>
+                    <a href="#convenience-store" class="link-card">The Convenience Store</a>
+                </h3>
                 <figure>
                     <img class="img-locacion" src="../img/Convenience_store_29.webp" alt="Convenience Store">
                     <figcaption>The Convenience Store, una de las locaciones más inquietantes y simbólicas de la serie
@@ -349,8 +400,8 @@
                 </p>
             </article>
 
-            <article>
-                <h4>Una ambientación única</h4>
+            <article class="ambientacion-unica">
+                <h3>Una ambientación única</h3>
                 <figure>
                     <img class="img-portada-pagina" src="../img/ambientcion.jpg" alt="ambientación">
                     <figcaption>La combinación de espacios cotidianos y sobrenaturales define la ambientación de Twin
@@ -377,10 +428,14 @@
         <p class="footer-text">Un pequeño pueblo. Grandes misterios. Nada es lo que parece.</p>
 
         <div class="footer-links">
-            <a href="https://mubi.com/en/ar/series/twin-peaks" target="_blank"><img class="img-footer logo-mubi" src="../img/mubi.png" alt="Mubi"></a>
-            <a href="https://www.instagram.com/twinpeaks/?hl=es-la" target="_blank"><img class="img-footer" src="../img/ig.png" alt="Instagram"></a>
-            <a href="https://www.imdb.com/title/tt0098936/" target="_blank"><img class="img-footer" src="../img/imdb.png" alt="IMDb"></a>
-            <a href="https://twinpeaks.fandom.com/wiki/Twin_Peaks_Wiki" target="_blank"><img class="img-footer" src="../img/tpwiki.webp" alt="Twin Peaks Wiki"></a>
+            <a href="https://mubi.com/en/ar/series/twin-peaks" target="_blank"><img class="img-footer logo-mubi"
+                    src="../img/mubi.png" alt="Mubi"></a>
+            <a href="https://www.instagram.com/twinpeaks/?hl=es-la" target="_blank"><img class="img-footer"
+                    src="../img/ig.png" alt="Instagram"></a>
+            <a href="https://www.imdb.com/title/tt0098936/" target="_blank"><img class="img-footer"
+                    src="../img/imdb.png" alt="IMDb"></a>
+            <a href="https://twinpeaks.fandom.com/wiki/Twin_Peaks_Wiki" target="_blank"><img class="img-footer"
+                    src="../img/tpwiki.webp" alt="Twin Peaks Wiki"></a>
         </div>
     </footer>
 </body>

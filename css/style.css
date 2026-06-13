@@ -49,6 +49,8 @@ p {
 }
 
 section {
+    position: relative;
+    overflow: hidden;
     background-color: #f5f1e8;
     border: 2px solid #5a1111;
     padding: clamp(1rem, 3vw, 1.5rem);
@@ -56,12 +58,40 @@ section {
     width: min(90%, 1000px);
 }
 
+/* Detalle decorativo para los contenedores principales */
+section::before {
+    content: "TWIN PEAKS FILE";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    color: rgba(90, 17, 17, 0.25);
+}
+
+
+/* Contenedores internos */
 article {
+    position: relative;
+    overflow: hidden;
     background-color: #f8f4ec;
     border: 1px solid #5a1111;
     padding: clamp(1rem, 3vw, 1.5rem);
     margin-bottom: 1.5rem;
+
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
 }
+
+article:hover {
+    background-color: #eadbc8;
+    box-shadow: 0 0 14px rgba(90, 17, 17, 0.25);
+    transform: translateY(-4px);
+}
+
 
 figure {
     margin: 0 auto 1.5rem;
@@ -86,52 +116,111 @@ audio {
     display: block;
     width: min(90%, 300px);
     margin: 1.5rem auto;
+    border: 2px solid #5a1111;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    background-color: #f8f4ec;
 }
+
 /* Estilos Generales */
 
 
 /* Estilos Nav */
+/* Estilos Nav */
+
 header {
-    background-color: #2b0000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: linear-gradient(180deg, #2b0000, #3b0a0a);
     color: white;
-    padding: clamp(1rem, 3vw, 1.5rem);
+    padding: 0.6rem 1rem 0.5rem;
     text-align: center;
     font-family: 'Cinzel', serif;
+    box-shadow: 0 4px 14px rgba(43, 0, 0, 0.45);
 }
 
+/* Logo / imagen que lleva al index */
+.link-index {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 0.45rem;
+}
+
+.imagen-index {
+    display: block;
+    width: clamp(70px, 10vw, 120px);
+    height: auto;
+    margin: 0 auto;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.link-index:hover .imagen-index {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 6px rgba(245, 240, 230, 0.45));
+}
+
+.link-index:hover .imagen-index {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(245, 240, 230, 0.45));
+}
+
+/* Barra de navegación */
 .menu-nav {
-    background-color: #4b0d0d;
-    padding: 0.75rem;
+    background-color: rgba(75, 13, 13, 0.95);
+    border: 1px solid rgba(245, 240, 230, 0.25);
+    border-radius: 999px;
+    padding: 0.35rem;
+    width: min(90%, 720px);
+    margin: 0 auto;
 }
 
+/* Lista del menú */
 .lista-nav {
     margin: 0;
     padding: 0;
-    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
 }
 
 .lista-nav-item {
     list-style: none;
-    display: inline-block;
-    margin: 0.3rem 0.6rem;
 }
 
+/* Links del menú */
 .lista-nav-link {
-    color: white;
+    color: #f5f0e6;
     text-decoration: none;
-    padding: 0.5rem 0.8rem;
+    padding: 0.4rem 0.65rem;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    border-radius: 999px;
+    letter-spacing: 0.02rem;
+    font-size: 0.9rem;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .lista-nav-link:hover {
-    background-color: #7a1d1d;
+    background-color: #f5f0e6;
+    color: #3b0a0a;
+    transform: translateY(-2px);
 }
 
-.link-index {
-    display: block;
-    width: fit-content;
-    margin: 0 auto 0.8rem auto;
+/* Link activo de la página actual */
+.lista-nav-link.activo {
+    background-color: #f5f0e6;
+    color: #3b0a0a;
 }
 
 /* Estilos Nav */
@@ -160,7 +249,7 @@ footer {
     border-radius: 8px;
     outline: 2px solid transparent;
     outline-offset: 4px;
-    transition: 
+    transition:
         transform 0.3s ease,
         outline-color 0.3s ease,
         background-color 0.3s ease;
@@ -175,6 +264,7 @@ footer {
 .logo-mubi {
     border-radius: 8px;
 }
+
 /* Estilos del footer */
 
 
@@ -211,10 +301,21 @@ footer {
     height: clamp(300px, 45vw, 380px);
 }
 
-.imagen-index {
-    display: block;
-    width: clamp(160px, 22vw, 280px);
-    height: auto;
-    margin: 0 auto;
+.img-portada-pagina,
+.img-personaje,
+.img-locacion,
+.img-portada-temporada {
+    box-shadow: 0 8px 18px rgba(43, 0, 0, 0.25);
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+article:hover .img-portada-pagina,
+article:hover .img-personaje,
+article:hover .img-locacion,
+article:hover .img-portada-temporada {
+    transform: scale(1.03);
+    filter: contrast(1.08);
 }
 /* Estilos Imagenes */

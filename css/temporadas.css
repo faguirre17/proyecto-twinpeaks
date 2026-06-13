@@ -1,0 +1,25 @@
+/* Listas de episodios */
+
+.lista-episodios {
+    padding-left: 0;
+    list-style-position: inside;
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+.lista-episodios li {
+    background-color: #f5f1e8;
+    border-left: 4px solid #5a1111;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.lista-episodios li:hover {
+    background-color: #3b0a0a;
+    color: #f5f0e6;
+}

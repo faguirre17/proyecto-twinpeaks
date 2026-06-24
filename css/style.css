@@ -143,16 +143,16 @@ header {
 
 /* Logo / imagen que lleva al index */
 .link-index {
-    display: block;
+    display: inline-block;
     width: fit-content;
-    margin: 0 auto 0.45rem;
+    margin: 0;
 }
 
 .imagen-index {
     display: block;
     width: clamp(70px, 10vw, 120px);
     height: auto;
-    margin: 0 auto;
+    margin-right: 1rem;
 
     transition:
         transform 0.3s ease,
@@ -175,20 +175,20 @@ header {
     border: 1px solid rgba(245, 240, 230, 0.25);
     border-radius: 999px;
     padding: 0.35rem;
-    width: min(90%, 720px);
+    width: min(90%, 900px);
     margin: 0 auto;
 }
 
 /* Lista del menú */
 .lista-nav {
-    margin: 0;
+   margin: 0;
     padding: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.25rem;
-    flex-wrap: wrap;
+    gap: 0.2rem;
+    flex-wrap: nowrap;
 }
 
 .lista-nav-item {

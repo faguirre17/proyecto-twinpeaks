@@ -318,4 +318,23 @@ article:hover .img-portada-temporada {
     transform: scale(1.03);
     filter: contrast(1.08);
 }
+
+/* Botón volver al inicio */
+
+.boton-volver {
+    display: block;
+    width: clamp(240px, 45vw, 500px);
+}
+
+.boton-volver img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.boton-volver:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 12px rgba(90, 17, 17, 0.45));
+}
 /* Estilos Imagenes */

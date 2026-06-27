@@ -7,7 +7,8 @@
     <title>Contacto</title>
     <link rel="icon" href="../img/favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
-</head>
+    <link rel="stylesheet" href="../css/contacto.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Dfjf06oQDzjlIZUDqeHEqfjgX_nttcGEGbyRY3j_TSt-iRZrHaDHpYuoekN6rXJfjAQquEidPfQNKsEF_rIFefh4g1CRP8YCmYypGerTX36DGeLp3EGDI7p8d7xttzSkKCx7aq-8PirjY5aDL7uDMV2ZFs6VkvuuSr9RpNL0mjFRRcxw3pgykZ96xD6xEkyc436n1U6prwSxG6dChnlhygUo7O7nZt3AirI8VpBbBot8dbjJ0fV8vuMPKGJqkTCOGCvQxcsg0qGCP_-MbbercDy-ht3lrWBfmRXV7ZhH2ZB1XujBto7Nj4f49_ZcxYmAkNiW1PmbwMs7M2oo3p1gHw" charset="UTF-8"></script></head>
 
 <body>
     <header>
@@ -35,7 +36,7 @@
 
 
             <figure>
-                <img class="img-portada-pagina" src="../img/contacto.jpg" alt="Sitio en construcción">
+                <img class="img-portada-pagina" src="../img/contacto.jpg" alt="Contacto Twin Peaks">
                 <figcaption>Esperamos tu contacto</figcaption>
             </figure>
             <p>
@@ -53,21 +54,42 @@
         </section>
 
 
-        <!-- Aquí abajo iría el formulario -->
         <section>
-            <h3>Sección en construcción</h3>
+            <h3>Formulario de contacto</h3>
 
             <article>
-                <figure>
-                    <img class="img-portada-pagina" src="../img/en-construccion-twin-peaks.png"
-                        alt="Sitio en construcción">
-                    <figcaption>La sección de contacto se encuentra en construcción</figcaption>
-                </figure>
-
                 <p>
-                    Esta parte del sitio todavía no está terminada. Próximamente se agregará un formulario de contacto
-                    para recibir mensajes, consultas y comentarios relacionados con Twin Peaks.
+                    Completá el formulario para enviar consultas, comentarios o teorías relacionadas con Twin Peaks.
                 </p>
+
+                <form class="formulario-contacto" action="https://formsubmit.co/57cf8605d89f5bf20d6832abdb58e633" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio Twin Peaks">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" class="campo-oculto" tabindex="-1" autocomplete="off">
+
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresá tu email" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje" required></textarea>
+                    </div>
+
+                    <button class="boton-formulario" type="submit">Enviar mensaje</button>
+                </form>
             </article>
         </section>
 

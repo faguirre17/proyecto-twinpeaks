@@ -23,3 +23,25 @@
     background-color: #3b0a0a;
     color: #f5f0e6;
 }
+/* Listas de episodios */
+
+/* Video Trailer */
+.contenedor-video {
+    width: min(100%, clamp(280px, 80vw, 800px));
+    margin: clamp(1.5rem, 4vw, 2.5rem) auto 0;
+    aspect-ratio: 16 / 9;
+
+    border: clamp(2px, 0.5vw, 4px) solid #5a1111;
+    border-radius: clamp(0.5rem, 1.5vw, 1rem);
+    overflow: hidden;
+
+    box-shadow: 0 8px 18px rgba(43, 0, 0, 0.25);
+}
+
+.video-trailer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* Video Trailer */

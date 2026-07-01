@@ -70,6 +70,16 @@ section::before {
     color: rgba(90, 17, 17, 0.25);
 }
 
+/* Estilo del section de Sinopsis para que no tape el content */
+.sinopsis-section {
+    padding-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.sinopsis-section::before {
+    top: clamp(0.8rem, 2vw, 1rem);
+    right: clamp(1rem, 3vw, 1.5rem);
+}
+
 
 /* Contenedores internos */
 article {

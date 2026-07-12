@@ -7,25 +7,34 @@
     <title>Twin Peaks</title>
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
 <header>
-    <nav class="menu-nav">
-        <ul class="lista-nav">
-            <li class="lista-nav-item">
-                <a class="link-index" href="./index.html">
-                    <img class="imagen-index" src="./img/index.png" alt="Inicio">
-                </a>
-            </li>
+<nav class="menu-nav">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/about.html">Sobre la serie</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/personajes.html">Personajes</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/temporadas.html">Temporadas</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/curiosidades.html">Curiosidades</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <ul class="lista-nav">
+        <li class="lista-nav-item lista-nav-logo">
+            <a class="link-index" href="../index.html">
+                <img class="imagen-index" src="../img/index.png" alt="Inicio">
+            </a>
+        </li>
+
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/about.html">Sobre la serie</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/personajes.html">Personajes</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/temporadas.html">Temporadas</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/curiosidades.html">Curiosidades</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./pages/contacto.html">Contacto</a></li>
+    </ul>
+
+    <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</nav>
 </header>
     <main>
 

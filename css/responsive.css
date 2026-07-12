@@ -1,0 +1,849 @@
+/* =========================================================
+   RESPONSIVE CSS - Twin Peaks
+   Breakpoints de referencia:
+   Mobile: 350px a 676px
+   Tablet: 678px a 1024px
+   Desktop: 1025px a 1920px
+   ========================================================= */
+
+
+/* =========================================================
+   CONFIGURACIÓN BASE RESPONSIVE
+   ========================================================= */
+
+body {
+    overflow-x: hidden;
+}
+
+.menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+
+/* =========================================================
+   MEDIA QUERY - MOBILE 350px a 676px
+   ========================================================= */
+
+@media (min-width: 350px) and (max-width: 676px) {
+
+    /* =========================
+       Estilos Generales
+       ========================= */
+
+    h2 {
+        font-size: clamp(1.35rem, 7vw, 1.7rem);
+    }
+
+    h3 {
+        font-size: clamp(1.15rem, 6vw, 1.45rem);
+    }
+
+    h4 {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 4.5vw, 1.1rem);
+        text-align: left;
+    }
+
+    section {
+        width: min(94%, clamp(20rem, 94vw, 40rem));
+        margin: clamp(1.2rem, 5vw, 2rem) auto;
+        padding: clamp(1rem, 5vw, 1.35rem);
+    }
+
+    section::before {
+        top: clamp(0.7rem, 3vw, 1rem);
+        right: clamp(0.7rem, 3vw, 1rem);
+        font-size: clamp(0.55rem, 2.4vw, 0.7rem);
+        letter-spacing: clamp(0.08rem, 1vw, 0.12rem);
+    }
+
+    article {
+        padding: clamp(1rem, 5vw, 1.3rem);
+        margin-bottom: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    audio {
+        width: min(100%, clamp(16rem, 85vw, 22rem));
+    }
+
+
+    /* =========================
+       Estilos Nav - Menú Hamburguesa CSS
+       Requiere:
+       input.menu-toggle + ul.lista-nav + label.menu-icon
+       El logo queda como primer li dentro del ul.
+       El desplegable se muestra como un panel único.
+       ========================= */
+
+    header {
+        padding: clamp(0.6rem, 2vw, 0.9rem) clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .menu-nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: clamp(0.4rem, 2vw, 0.6rem);
+        background-color: rgba(75, 10, 10, 0.75);
+        border-radius: clamp(0.6rem, 2vw, 1rem);
+        overflow: visible;
+    }
+
+    .lista-nav {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: transparent;
+    }
+
+    .lista-nav::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + clamp(0.5rem, 2vw, 0.8rem));
+        right: 0;
+
+        width: min(clamp(13rem, 65vw, 18rem), calc(100vw - 2rem));
+        height: clamp(13.5rem, 48vw, 16rem);
+
+        background: linear-gradient(180deg, #2b0000, #3b0a0a);
+        border: 1px solid rgba(245, 240, 230, 0.25);
+        border-radius: clamp(0.75rem, 2vw, 1rem);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+
+        opacity: 0;
+        transform: translateY(clamp(-0.7rem, -2vw, -0.4rem)) scale(0.96);
+        transform-origin: top right;
+        pointer-events: none;
+        z-index: 1000;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.35s ease;
+    }
+
+    .lista-nav > .lista-nav-item:first-child,
+    .lista-nav-logo {
+        display: block;
+        position: relative;
+        z-index: 1002;
+        margin-right: 0;
+    }
+
+    .lista-nav > .lista-nav-item:first-child .link-index,
+    .lista-nav-logo .link-index {
+        display: block;
+    }
+
+    .lista-nav > .lista-nav-item:first-child .imagen-index,
+    .lista-nav-logo .imagen-index {
+        width: clamp(65px, 18vw, 90px);
+        height: auto;
+        margin-right: 0;
+    }
+
+    .lista-nav > .lista-nav-item:not(:first-child) {
+        position: absolute;
+        right: 0;
+        width: min(clamp(13rem, 65vw, 18rem), calc(100vw - 2rem));
+        text-align: right;
+
+        opacity: 0;
+        transform: translateY(clamp(-0.7rem, -2vw, -0.4rem));
+        pointer-events: none;
+        z-index: 1001;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.35s ease;
+    }
+
+    .lista-nav > .lista-nav-item:not(:first-child) .lista-nav-link {
+        display: block;
+        width: 100%;
+        padding: clamp(0.55rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.2rem);
+
+        text-align: right;
+        white-space: nowrap;
+        color: #f5f0e6;
+        background: transparent;
+        border: none;
+        border-radius: clamp(0.35rem, 1.5vw, 0.55rem);
+        font-size: clamp(0.9rem, 3.2vw, 1rem);
+
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .lista-nav > .lista-nav-item:not(:first-child) .lista-nav-link:hover {
+        background-color: rgba(245, 240, 230, 0.12);
+        color: #f5f0e6;
+        transform: translateX(clamp(-0.2rem, -1vw, -0.1rem));
+    }
+
+    .lista-nav > .lista-nav-item:nth-child(2) {
+        top: calc(100% + clamp(0.9rem, 3vw, 1.1rem));
+    }
+
+    .lista-nav > .lista-nav-item:nth-child(3) {
+        top: calc(100% + clamp(3.3rem, 11vw, 3.7rem));
+    }
+
+    .lista-nav > .lista-nav-item:nth-child(4) {
+        top: calc(100% + clamp(5.7rem, 19vw, 6.3rem));
+    }
+
+    .lista-nav > .lista-nav-item:nth-child(5) {
+        top: calc(100% + clamp(8.1rem, 27vw, 8.9rem));
+    }
+
+    .lista-nav > .lista-nav-item:nth-child(6) {
+        top: calc(100% + clamp(10.5rem, 35vw, 11.5rem));
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.25rem, 1vw, 0.35rem);
+        width: clamp(42px, 12vw, 52px);
+        height: clamp(42px, 12vw, 52px);
+        cursor: pointer;
+        position: relative;
+        z-index: 1002;
+        border: 1px solid rgba(245, 240, 230, 0.4);
+        border-radius: clamp(0.5rem, 2vw, 0.75rem);
+        background-color: rgba(43, 0, 0, 0.65);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+        transition:
+            background-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .menu-icon:hover {
+        background-color: rgba(90, 17, 17, 0.95);
+        transform: scale(1.04);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .menu-icon span {
+        display: block;
+        width: clamp(1.5rem, 6vw, 2rem);
+        height: clamp(0.12rem, 0.6vw, 0.18rem);
+        background-color: #f5f0e6;
+        border-radius: 999px;
+
+        transition:
+            transform 0.35s ease,
+            opacity 0.25s ease,
+            background-color 0.3s ease;
+    }
+
+    .menu-toggle:checked ~ .lista-nav::after {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .menu-toggle:checked ~ .lista-nav > .lista-nav-item:not(:first-child) {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .menu-toggle:checked ~ .lista-nav > .lista-nav-item:nth-child(2) {
+        transition-delay: 0.05s;
+    }
+
+    .menu-toggle:checked ~ .lista-nav > .lista-nav-item:nth-child(3) {
+        transition-delay: 0.1s;
+    }
+
+    .menu-toggle:checked ~ .lista-nav > .lista-nav-item:nth-child(4) {
+        transition-delay: 0.15s;
+    }
+
+    .menu-toggle:checked ~ .lista-nav > .lista-nav-item:nth-child(5) {
+        transition-delay: 0.2s;
+    }
+
+    .menu-toggle:checked ~ .lista-nav > .lista-nav-item:nth-child(6) {
+        transition-delay: 0.25s;
+    }
+
+    .menu-toggle:checked ~ .menu-icon {
+        background-color: rgba(90, 17, 17, 1);
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: translateY(clamp(0.45rem, 1.5vw, 0.6rem)) rotate(45deg);
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: translateY(clamp(-0.6rem, -1.5vw, -0.45rem)) rotate(-45deg);
+    }
+
+
+    /* =========================
+       Estilos Footer
+       ========================= */
+
+    footer {
+        padding: clamp(1rem, 5vw, 1.4rem);
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(0.8rem, 4vw, 1rem);
+    }
+
+    .img-footer {
+        width: clamp(2rem, 10vw, 2.8rem);
+        height: auto;
+        margin: 0;
+    }
+
+    .logo-mubi {
+        width: clamp(3.5rem, 18vw, 5rem);
+    }
+
+
+    /* =========================
+       Estilos Imágenes
+       ========================= */
+
+    .img-portada-pagina {
+        height: clamp(13rem, 60vw, 20rem);
+    }
+
+    .img-personaje {
+        width: min(100%, clamp(11rem, 58vw, 14rem));
+        height: clamp(14rem, 72vw, 18rem);
+    }
+
+    .img-locacion {
+        width: min(100%, clamp(16rem, 86vw, 28rem));
+        height: clamp(13rem, 55vw, 18rem);
+    }
+
+    .img-portada-temporada {
+        width: min(100%, clamp(11rem, 58vw, 15rem));
+        height: clamp(17rem, 82vw, 22rem);
+    }
+
+    .boton-volver {
+        width: min(100%, clamp(14rem, 75vw, 24rem));
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+       Grilla de Personajes / Cards
+       1 columna en mobile
+       ========================= */
+
+    .personajes-grid {
+        gap: clamp(1rem, 5vw, 1.4rem);
+        justify-content: center;
+    }
+
+    .personajes-grid article,
+    .personajes-grid .ambientacion-unica,
+    .personajes-grid article:target,
+    .personajes-grid .intro-personajes {
+        flex: 0 1 100%;
+        max-width: 100%;
+        margin-bottom: 0;
+        scroll-margin-top: clamp(5rem, 20vw, 7rem);
+    }
+
+    .personajes-grid .ambientacion-unica {
+        padding: clamp(1rem, 5vw, 1.4rem);
+    }
+
+    .personajes-grid .ambientacion-unica figure {
+        max-width: min(100%, clamp(16rem, 86vw, 28rem));
+    }
+
+    .personajes-grid .ambientacion-unica img {
+        max-height: clamp(13rem, 55vw, 18rem);
+    }
+
+
+    /* =========================
+       Listas de Episodios
+       ========================= */
+
+    .lista-episodios {
+        column-count: 1;
+        column-gap: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .lista-episodios li {
+        padding: clamp(0.5rem, 3vw, 0.65rem) clamp(0.65rem, 4vw, 0.9rem);
+        font-size: clamp(0.95rem, 4vw, 1.05rem);
+    }
+
+
+    /* =========================
+       Video Trailer
+       ========================= */
+
+    .contenedor-video {
+        width: min(100%, clamp(16rem, 88vw, 36rem));
+        margin-top: clamp(1.2rem, 5vw, 1.8rem);
+        border-radius: clamp(0.5rem, 3vw, 0.8rem);
+    }
+
+
+    /* =========================
+       Formulario de Contacto
+       ========================= */
+
+    .formulario-contacto {
+        gap: clamp(0.8rem, 4vw, 1rem);
+        margin-top: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    .grupo-formulario input,
+    .grupo-formulario textarea {
+        padding: clamp(0.7rem, 4vw, 0.9rem) clamp(0.8rem, 4vw, 1rem);
+        font-size: clamp(1rem, 4.5vw, 1.1rem);
+    }
+
+    .grupo-formulario textarea {
+        min-height: clamp(8rem, 40vw, 10rem);
+    }
+
+    .boton-formulario {
+        width: min(100%, clamp(12rem, 70vw, 20rem));
+        padding: clamp(0.75rem, 4vw, 0.9rem) clamp(1rem, 6vw, 2rem);
+        font-size: clamp(0.95rem, 4vw, 1.05rem);
+    }
+}
+
+
+/* =========================================================
+   MEDIA QUERY - TABLET 678px a 1024px
+   ========================================================= */
+
+@media (min-width: 678px) and (max-width: 1024px) {
+
+    /* =========================
+       Estilos Generales
+       ========================= */
+
+    h2 {
+        font-size: clamp(1.5rem, 3.6vw, 1.9rem);
+    }
+
+    h3 {
+        font-size: clamp(1.25rem, 3vw, 1.55rem);
+    }
+
+    h4 {
+        font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 2.2vw, 1.12rem);
+    }
+
+    section {
+        width: min(92%, clamp(40rem, 90vw, 56rem));
+        padding: clamp(1.2rem, 3vw, 1.6rem);
+        margin: clamp(1.6rem, 3vw, 2.2rem) auto;
+    }
+
+    article {
+        padding: clamp(1.1rem, 3vw, 1.5rem);
+    }
+
+
+    /* =========================
+       Estilos Nav
+       Logo dentro del ul
+       ========================= */
+
+    header {
+        padding: clamp(0.55rem, 1.6vw, 0.8rem) clamp(0.8rem, 2vw, 1.2rem);
+    }
+
+    .menu-nav {
+        width: min(96%, clamp(42rem, 94vw, 58rem));
+        padding: clamp(0.35rem, 1vw, 0.5rem);
+    }
+
+    .lista-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: clamp(0.2rem, 0.8vw, 0.5rem);
+    }
+
+    .lista-nav > .lista-nav-item:first-child,
+    .lista-nav-logo {
+        display: flex;
+        align-items: center;
+        margin-right: clamp(0.4rem, 1vw, 0.8rem);
+    }
+
+    .imagen-index {
+        width: clamp(4.5rem, 9vw, 6.2rem);
+        margin-right: 0;
+    }
+
+    .lista-nav-link {
+        padding: clamp(0.35rem, 1vw, 0.5rem) clamp(0.45rem, 1.4vw, 0.75rem);
+        font-size: clamp(0.78rem, 1.6vw, 0.92rem);
+    }
+
+
+    /* =========================
+       Estilos Footer
+       ========================= */
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(0.8rem, 2vw, 1.2rem);
+    }
+
+    .img-footer {
+        width: clamp(2.2rem, 5vw, 3rem);
+        height: auto;
+        margin: 0;
+    }
+
+    .logo-mubi {
+        width: clamp(4rem, 9vw, 5.5rem);
+    }
+
+
+    /* =========================
+       Estilos Imágenes
+       ========================= */
+
+    .img-portada-pagina {
+        height: clamp(18rem, 46vw, 28rem);
+    }
+
+    .img-personaje {
+        width: clamp(11rem, 23vw, 13.5rem);
+        height: clamp(14.5rem, 30vw, 17.5rem);
+    }
+
+    .img-locacion {
+        width: min(100%, clamp(18rem, 45vw, 31rem));
+        height: clamp(14rem, 28vw, 18rem);
+    }
+
+    .img-portada-temporada {
+        width: clamp(12rem, 26vw, 15rem);
+        height: clamp(18rem, 38vw, 22rem);
+    }
+
+    .boton-volver {
+        width: min(100%, clamp(16rem, 50vw, 28rem));
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+       Grilla de Personajes / Cards
+       2 columnas en tablet
+       ========================= */
+
+    .personajes-grid {
+        gap: clamp(1rem, 2.5vw, 1.5rem);
+        justify-content: space-between;
+    }
+
+    .personajes-grid article {
+        flex: 0 1 clamp(18rem, 48%, 27rem);
+        max-width: clamp(18rem, 48%, 27rem);
+        margin-bottom: 0;
+        scroll-margin-top: clamp(6rem, 14vw, 8rem);
+    }
+
+    .personajes-grid .ambientacion-unica,
+    .personajes-grid article:target,
+    .personajes-grid .intro-personajes {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .personajes-grid .ambientacion-unica {
+        padding: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .personajes-grid .ambientacion-unica figure {
+        max-width: min(100%, clamp(30rem, 75vw, 50rem));
+    }
+
+    .personajes-grid .ambientacion-unica img {
+        max-height: clamp(16rem, 34vw, 21rem);
+    }
+
+
+    /* =========================
+       Listas de Episodios
+       ========================= */
+
+    .lista-episodios {
+        column-count: 2;
+        column-gap: clamp(1.5rem, 4vw, 2.2rem);
+    }
+
+    .lista-episodios li {
+        font-size: clamp(1rem, 2vw, 1.08rem);
+    }
+
+
+    /* =========================
+       Video Trailer
+       ========================= */
+
+    .contenedor-video {
+        width: min(100%, clamp(34rem, 78vw, 48rem));
+    }
+
+
+    /* =========================
+       Formulario de Contacto
+       ========================= */
+
+    .formulario-contacto {
+        gap: clamp(0.9rem, 2vw, 1.1rem);
+    }
+
+    .grupo-formulario input,
+    .grupo-formulario textarea {
+        padding: clamp(0.75rem, 1.8vw, 0.95rem) clamp(0.9rem, 2vw, 1.1rem);
+        font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+
+    .boton-formulario {
+        padding: clamp(0.75rem, 1.8vw, 0.9rem) clamp(1.6rem, 4vw, 2.2rem);
+        font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+}
+
+
+/* =========================================================
+   MEDIA QUERY - DESKTOP 1025px a 1920px
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+    /* =========================
+       Estilos Generales
+       ========================= */
+
+    h2 {
+        font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+
+    h3 {
+        font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+    }
+
+    h4 {
+        font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 1.2vw, 1.15rem);
+    }
+
+    section {
+        width: min(90%, clamp(58rem, 76vw, 62.5rem));
+        padding: clamp(1.2rem, 2vw, 1.5rem);
+    }
+
+    article {
+        padding: clamp(1.1rem, 2vw, 1.5rem);
+    }
+
+
+    /* =========================
+       Estilos Nav
+       Logo dentro del ul
+       ========================= */
+
+    .menu-nav {
+        width: min(90%, clamp(52rem, 70vw, 56.25rem));
+    }
+
+    .lista-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.15rem, 0.5vw, 0.3rem);
+    }
+
+    .lista-nav > .lista-nav-item:first-child,
+    .lista-nav-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .imagen-index {
+        width: clamp(4.4rem, 6vw, 7.5rem);
+        margin-right: clamp(0.7rem, 1vw, 1rem);
+    }
+
+    .lista-nav-link {
+        padding: clamp(0.35rem, 0.6vw, 0.45rem) clamp(0.55rem, 0.9vw, 0.75rem);
+        font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+    }
+
+
+    /* =========================
+       Estilos Footer
+       ========================= */
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(0.8rem, 1vw, 1.2rem);
+    }
+
+    .img-footer {
+        width: clamp(2.4rem, 3vw, 3.2rem);
+        height: auto;
+        margin: 0;
+    }
+
+    .logo-mubi {
+        width: clamp(4.2rem, 5vw, 5.6rem);
+    }
+
+
+    /* =========================
+       Estilos Imágenes
+       ========================= */
+
+    .img-portada-pagina {
+        height: clamp(18rem, 32vw, 31.25rem);
+    }
+
+    .img-personaje {
+        width: clamp(11.25rem, 14vw, 13.75rem);
+        height: clamp(14.5rem, 18vw, 17.5rem);
+    }
+
+    .img-locacion {
+        width: min(100%, clamp(20rem, 38vw, 31.25rem));
+        height: clamp(14rem, 20vw, 17.5rem);
+    }
+
+    .img-portada-temporada {
+        width: clamp(12.5rem, 16vw, 16.25rem);
+        height: clamp(18.75rem, 24vw, 23.75rem);
+    }
+
+    .boton-volver {
+        width: min(100%, clamp(16rem, 35vw, 31.25rem));
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+       Grilla de Personajes / Cards
+       3 columnas en desktop
+       ========================= */
+
+    .personajes-grid {
+        gap: clamp(1rem, 1.8vw, 1.5rem);
+        justify-content: space-between;
+    }
+
+    .personajes-grid article {
+        flex: 0 1 clamp(17rem, 31%, 19.5rem);
+        max-width: clamp(17rem, 31%, 19.5rem);
+        margin-bottom: 0;
+    }
+
+    .personajes-grid .ambientacion-unica,
+    .personajes-grid article:target,
+    .personajes-grid .intro-personajes {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .personajes-grid .ambientacion-unica {
+        padding: clamp(1.5rem, 2.2vw, 2rem);
+    }
+
+    .personajes-grid .ambientacion-unica figure {
+        max-width: min(100%, clamp(42rem, 65vw, 53rem));
+    }
+
+    .personajes-grid .ambientacion-unica img {
+        max-height: clamp(18rem, 24vw, 22rem);
+    }
+
+
+    /* =========================
+       Listas de Episodios
+       ========================= */
+
+    .lista-episodios {
+        column-count: 2;
+        column-gap: clamp(1.8rem, 3vw, 2.5rem);
+    }
+
+    .lista-episodios li {
+        font-size: clamp(1rem, 1.1vw, 1.1rem);
+    }
+
+
+    /* =========================
+       Video Trailer
+       ========================= */
+
+    .contenedor-video {
+        width: min(100%, clamp(38rem, 56vw, 50rem));
+    }
+
+
+    /* =========================
+       Formulario de Contacto
+       ========================= */
+
+    .grupo-formulario input,
+    .grupo-formulario textarea {
+        font-size: clamp(1rem, 1.1vw, 1.1rem);
+    }
+
+    .boton-formulario {
+        font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    }
+}

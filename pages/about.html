@@ -8,25 +8,35 @@
     <link rel="icon" href="../img/favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/personajes.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
 <body>
 <header>
-    <nav class="menu-nav">
-        <ul class="lista-nav">
-            <li class="lista-nav-item">
-                <a class="link-index" href="../index.html">
-                    <img class="imagen-index" src="../img/index.png" alt="Inicio">
-                </a>
-            </li>
 
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./about.html">Sobre la serie</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./personajes.html">Personajes</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./temporadas.html">Temporadas</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./curiosidades.html">Curiosidades</a></li>
-            <li class="lista-nav-item"><a class="lista-nav-link" href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <nav class="menu-nav">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <ul class="lista-nav">
+        <li class="lista-nav-item lista-nav-logo">
+            <a class="link-index" href="../index.html">
+                <img class="imagen-index" src="../img/index.png" alt="Inicio">
+            </a>
+        </li>
+
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./about.html">Sobre la serie</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./personajes.html">Personajes</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./temporadas.html">Temporadas</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./curiosidades.html">Curiosidades</a></li>
+        <li class="lista-nav-item"><a class="lista-nav-link" href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</nav>
 </header>
     <main>
         <section>
